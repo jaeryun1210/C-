@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+void readArray(int a[], int size);
+int addArray(int a[], int size);
+void makeDouble(int a[], int size);
+void printArray(int a[], int size);
+
+int main() {
+    cout << "2021305082 최재륜\n";
+
+    int n[5] = {};
+    readArray(n, 5);
+
+    int sum = addArray(n, 5);
+    cout << "배열 n의 합은" << sum << "입니다\n";
+
+    makeDouble(n, 5);
+    printArray(n, 5);
+}
+void readArray(int a[], int size) {
+    int i;
+    cout << "숫자 5개 입력>>";
+    for (i = 0; i < size; i++)
+        cin >> a[i];
+}
+int addArray(int a[], int size) {
+    int i, sum = 0;
+    for (i = 0; i < size; i++)
+        sum += a[i];
+    return sum;
+}
+void makeDouble(int a[], int size) {
+    int i;
+    for (i = 0; i < size; i++)
+        a[i] *= 2;
+}
+void printArray(int a[], int size) {
+    for (int i = 0; i < size; i++)
+        cout << a[i] << ' ';
+    cout << "\n";
+}
